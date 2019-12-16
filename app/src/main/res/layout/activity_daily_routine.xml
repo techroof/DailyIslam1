@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DailyRoutine"
+    android:background="#fff">
+
+    <include android:id="@+id/daily_routine_toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:layout_constraintTop_toBottomOf="@id/daily_routine_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:background="#fff">
+
+    <TextView
+        android:id="@+id/prayer_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#3d3d3d"
+        android:text="Have you completed prayers:"/>
+
+    <TextView
+        android:id="@+id/fajar_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fajar"
+        android:textColor="#3d3d3d"
+        android:textSize="16sp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/prayer_tv"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/fajar_chkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:onClick="chkBox"
+        android:tag="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prayer_tv"/>
+
+    <TextView
+        android:id="@+id/duhar_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duhar"
+        android:textColor="#3d3d3d"
+        android:textSize="16sp"
+        android:padding="10dp"
+
+        app:layout_constraintTop_toBottomOf="@id/fajar_tv"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/duhar_chkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:onClick="chkBox"
+        android:tag="1"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fajar_chkbox"
+         />
+    <TextView
+        android:id="@+id/asr_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Asr"
+        android:padding="10dp"
+
+        android:textColor="#3d3d3d"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/duhar_tv"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/asr_chkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:onClick="chkBox"
+        android:tag="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/duhar_chkbox"
+         />
+    <TextView
+        android:id="@+id/magrib_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maghrib"
+        android:padding="10dp"
+
+        android:textColor="#3d3d3d"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/asr_tv"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/maghrib_chkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:onClick="chkBox"
+        android:tag="3"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/asr_chkbox"
+       />
+    <TextView
+        android:id="@+id/isha_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Isha"
+        android:padding="10dp"
+
+        android:textColor="#3d3d3d"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/magrib_tv"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/isha_chkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:onClick="chkBox"
+        android:tag="4"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/maghrib_chkbox"
+        />
+
+            <TextView
+                android:id="@+id/quran_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recited Quran after Fajar prayer"
+                android:textColor="#3d3d3d"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/isha_tv" />
+
+            <CheckBox
+                android:id="@+id/quran_chkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:onClick="chkBox"
+                android:tag="5"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/isha_tv"
+                />
+
+            <TextView
+                android:id="@+id/tasbeeh_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tasbeeh after Asr prayer"
+                android:textColor="#3d3d3d"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/quran_tv" />
+
+            <TextView
+                android:id="@+id/tasbeeh_one_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="33 times SUBHAN ALLAH"
+                android:textColor="#3d3d3d"
+                android:textSize="16sp"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tasbeeh_tv" />
+
+            <CheckBox
+                android:id="@+id/tasbeeh_one_chkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:onClick="chkBox"
+                android:tag="6"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tasbeeh_tv"
+                />
+
+            <TextView
+                android:id="@+id/tasbeeh_two_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="33 times ALHAMDULILLAH"
+                android:textColor="#3d3d3d"
+                android:textSize="16sp"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tasbeeh_one_chkbox" />
+
+            <CheckBox
+                android:id="@+id/tasbeeh_two_chkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:onClick="chkBox"
+                android:tag="7"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tasbeeh_one_chkbox"
+                />
+            <TextView
+                android:id="@+id/tasbeeh_three_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="34 time AllAHUAKBAR"
+                android:textColor="#3d3d3d"
+                android:textSize="16sp"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tasbeeh_two_chkbox" />
+
+            <CheckBox
+                android:id="@+id/tasbeeh_three_chkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:onClick="chkBox"
+                android:tag="8"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tasbeeh_two_chkbox"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

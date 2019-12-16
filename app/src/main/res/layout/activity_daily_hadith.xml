@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.bullhead.quranverse.demo.MainActivity">
+
+        <include android:id="@+id/daily_hadith"
+            layout="@layout/toolbar"/>
+
+        <com.bullhead.quranquotes.views.QuranVerseView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            app:surahNameTextSize="12sp"
+            app:surahNameTextColor="#888888"
+            app:verseTextSize="20sp"
+            app:verseTextColor="@color/colorPrimaryDark"
+            />
+        <com.bullhead.quranquotes.views.HadithOfDayView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:hadithTextSize="22sp"
+            app:hadithTextColor="@color/colorAccent"
+            app:infoTextColor="@color/colorPrimary"
+            app:infoTextSize="12sp"
+            />
+
+        <com.bullhead.quranquotes.views.RandomHadithView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:hadithTextColor="@color/colorAccent"
+            app:hadithTextSize="20sp"
+            app:infoTextColor="@color/colorPrimary"
+            app:infoTextSize="12sp"
+            />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/kaaba_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        android:src="@drawable/kaaba"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+         <include
+                android:id="@+id/main_toolbar"
+                layout="@layout/toolbar" />
+
+
+
+            <RelativeLayout
+                android:id="@+id/prayers_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:paddingBottom="20dp"
+                android:background="@drawable/prayer_time_rl_bg"
+                android:layout_below="@id/main_toolbar"
+                android:layout_marginTop="120dp">
+
+                <TextView
+                    android:id="@+id/prayer_timer_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="13dp"
+                    android:paddingTop="13dp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center"
+                    android:text="Duhar After 1 Hrs: 44 Mins: 13Sec"
+                    android:background="@drawable/timer_bg"/>
+
+                <RelativeLayout
+                    android:id="@+id/r1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/relative_bg"
+                    android:layout_below="@id/prayer_timer_text">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/fajr_red"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="invisible"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        />
+
+                <TextView
+                    android:id="@+id/fajr_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fajr"
+                    android:textSize="13sp"
+                    android:textColor="@color/textColor"
+                    android:layout_toRightOf="@id/fajr_red"
+                    />
+
+                <TextView
+                    android:id="@+id/fajr_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="04:00 am"
+                    android:textSize="13sp"
+                    
+                    android:textColor="@color/textColor"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/r2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/r1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/relative_bg">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/zuhr_red"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="invisible"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        />
+                <TextView
+                    android:id="@+id/zuhr_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Duhar"
+                    android:textSize="13sp"
+                    android:layout_toRightOf="@id/zuhr_red"
+                    android:textColor="@color/textColor"
+                   />
+
+                <TextView
+                    android:id="@+id/zuhr_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01:02 pm"
+                    android:textSize="13sp"
+                    android:textColor="@color/textColor"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/r3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/r2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/relative_bg"
+                    >
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/asr_red"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="invisible"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        />
+
+                <TextView
+                    android:id="@+id/asar_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Asr"
+                    android:textSize="13sp"
+                    android:textColor="@color/textColor"
+                    android:layout_toRightOf="@id/asr_red"/>
+
+                <TextView
+                    android:id="@+id/asar_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="04:00 pm"
+                    android:textSize="13sp"
+                    
+                    android:textColor="@color/textColor"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/r4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/r3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/relative_bg"
+                    >
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/magrib_red"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="invisible"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        />
+
+                <TextView
+                    android:id="@+id/magrib_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maghrib"
+                    android:textSize="13sp"
+                    android:textColor="@color/textColor"
+                    android:layout_toRightOf="@id/magrib_red"/>
+
+                <TextView
+                    android:id="@+id/magrib_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="06:00 pm"
+                    android:textSize="13sp"
+                    android:textColor="@color/textColor"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/r5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/r4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/relative_bg"
+                    >
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/isha_red"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="invisible"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        />
+
+                <TextView
+                    android:id="@+id/isha_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Isha"
+                    android:textSize="13sp"
+                    android:textColor="@color/textColor"
+                    android:layout_toRightOf="@id/isha_red"/>
+
+                <TextView
+                    android:id="@+id/isha_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="07:00 pm"
+                    android:textSize="13sp"
+                    android:textColor="@color/textColor"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
+                </RelativeLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/green_icon"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/green_icon"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/r5"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    />
+                <TextView
+                    android:id="@+id/next_prayer_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Prayer"
+                    android:textSize="10sp"
+                    android:textColor="@color/textColor"
+                    android:layout_toRightOf="@id/green_icon"
+                    android:layout_below="@id/r5"
+                    android:layout_marginTop="15dp"/>
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/red_icon"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/red_icon"
+                    android:layout_below="@id/r5"
+                    android:layout_marginTop="20dp"
+                    android:layout_toLeftOf="@id/qaza_prayer_text"
+                    />
+                <TextView
+                    android:id="@+id/qaza_prayer_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Qaza Prayer"
+                    android:textSize="10sp"
+                    android:textColor="@color/textColor"
+                    android:layout_below="@id/r5"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/textColor"
+            android:theme="@style/NavTheme"
+            app:headerLayout="@layout/navigation_header"
+            app:itemIconTint="#fff"
+            app:itemTextColor="#fff"
+            app:menu="@menu/main_menu" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

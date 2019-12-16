@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/qibla_direction"
+        android:title="Qibla Direction"
+        android:icon="@drawable/ic_navigation_black_24dp"/>
+    <item
+        android:id="@+id/nearby_mosque"
+        android:title="Nearby Mosque"
+        android:icon="@drawable/ic_location_on_black_24dp"/>
+    <item
+        android:id="@+id/islamic_calender"
+        android:title="Islamic Calender"
+        android:icon="@drawable/ic_event_black_24dp"/>
+
+    <item
+        android:id="@+id/quran_verses"
+        android:title="Daily Hadith"
+        android:icon="@drawable/ic_book_black_24dp"/>
+    <item
+        android:id="@+id/tally_counter"
+        android:title="Tally Counter"
+        android:icon="@drawable/ic_touch_app_black_24dp"/>
+
+    <item
+        android:id="@+id/umri_cal"
+        android:title="Qaza-e-Umri Calculator"
+        android:icon="@drawable/ic_keyboard_black_24dp"/>
+
+    <item
+        android:id="@+id/daily_routine"
+        android:title="Daily Routine"
+        android:icon="@drawable/ic_check_circle_black_24dp"/>
+
+    <item
+        android:id="@+id/quran_surahs"
+        android:title="Surahs"
+        android:icon="@drawable/ic_bookmark_border_black_24dp"/>
+
+</menu>

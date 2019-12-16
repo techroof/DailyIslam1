@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QazaNamazCalActivity"
+    android:background="#fff">
+
+    <include android:id="@+id/qaza_umri_toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/qaza_umri_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Details"
+        android:textStyle="bold"
+        android:textColor="#3d3d3d"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/qaza_umri_toolbar"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/dob_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter you Date of Birth"
+        android:textColor="#3d3d3d"
+        android:background="@drawable/et_bg"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:focusable="false"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/qaza_umri_text"/>
+
+    <EditText
+        android:id="@+id/baligh_age_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter age of you became baligh"
+        android:textColor="#3d3d3d"
+        android:background="@drawable/et_bg"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="12sp"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/dob_et"/>
+
+    <TextView
+        android:id="@+id/qaza_umri_days_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total number of qaza-e-umri days:"
+        android:textStyle="bold"
+        android:textColor="#3d3d3d"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintRight_toLeftOf="@id/qaza_umri_days_tv"
+        app:layout_constraintTop_toBottomOf="@id/baligh_age_et"/>
+
+    <TextView
+        android:id="@+id/qaza_umri_days_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#3d3d3d"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/text_box_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/baligh_age_et"/>
+
+    <TextView
+        android:id="@+id/total_qaza_umri_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="Total qaza-e-umri:"
+        android:textColor="#3d3d3d"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/total_qaza_umri_days_tv"
+        app:layout_constraintRight_toLeftOf="@id/total_qaza_umri_text"
+        app:layout_constraintTop_toBottomOf="@id/qaza_umri_days_tv" />
+
+    <TextView
+        android:id="@+id/total_qaza_umri_days_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#3d3d3d"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/text_box_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/qaza_umri_days_tv"/>
+
+
+    <Button
+        android:id="@+id/calculate_umri_qaza_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Calculate"
+        android:textColor="#fff"
+        android:background="@drawable/cal_btn_bg"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toBottomOf="@id/total_qaza_umri_text"/>
+
+
+    <TextView
+        android:id="@+id/qaza_umri_text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This calculator gives an approximate number"
+        android:textStyle="bold"
+        android:textColor="#3d3d3d"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="end"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate_umri_qaza_btn"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
